@@ -32,7 +32,10 @@ export default function TeamSection() {
   };
 
   return (
-    <section id="team" className="py-20 scroll-mt-20 bg-gray-900">
+    <section
+      id="team"
+      className="md:py-20 py-13 md:scroll-mt-20 scroll-mt-78 bg-gray-900"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <motion.div
@@ -40,9 +43,9 @@ export default function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
             OUR TEAM
           </h2>
           <div className="w-16 h-1 bg-green-500 mx-auto"></div>
@@ -54,13 +57,11 @@ export default function TeamSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-y-12 gap-y-9 mb-10 md:mb-16"
         >
           {teamMembers.map((member, index) => (
             <motion.div key={index} variants={item} className="text-center">
-              <h3 className="text-lg font-medium text-white mb-1">
-                {member.name}
-              </h3>
+              <h3 className="font-medium text-white mb-1">{member.name}</h3>
               <p className="text-sm text-gray-400">{member.role}</p>
             </motion.div>
           ))}
@@ -72,7 +73,7 @@ export default function TeamSection() {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="border-t border-gray-700 my-16 origin-left"
+          className="border-t border-gray-700 my-10 md:my-16 origin-left"
         />
 
         {/* Technical Advisors */}
@@ -91,13 +92,11 @@ export default function TeamSection() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-y-12 gap-y-9"
           >
             {technicalAdvisors.map((advisor, index) => (
               <motion.div key={index} variants={item} className="text-center">
-                <h3 className="text-lg font-medium text-white mb-1">
-                  {advisor.name}
-                </h3>
+                <h3 className="font-medium text-white mb-1">{advisor.name}</h3>
                 <p className="text-sm text-gray-400">{advisor.role}</p>
               </motion.div>
             ))}

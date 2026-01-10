@@ -31,25 +31,28 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 scroll-mt-20 bg-gray-50">
+    <section
+      id="contact"
+      className="md:py-16 py-10 md:scroll-mt-20 scroll-mt-78 bg-gray-50"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center md:mb-12 mb-9">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             GET IN TOUCH
           </h2>
           <div className="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="md:text-lg text-gray-600 max-w-3xl mx-auto">
             Ready to start your sustainability journey? Contact us today to
             discuss how we can help your organization achieve its environmental
             and ESG goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-9">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="md:text-2xl text-xl font-bold text-gray-900 mb-6">
               Contact Information
             </h3>
             <div className="space-y-6">
@@ -62,10 +65,12 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-gray-900 mb-1">
                     Our Office
                   </h4>
-                  <p className="text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     123 Business Park, Tech District
                   </p>
-                  <p className="text-gray-600">Bangalore, Karnataka 560001</p>
+                  <p className=" text-sm md:text-base text-gray-600">
+                    Bangalore, Karnataka 560001
+                  </p>
                 </div>
               </div>
 
@@ -78,7 +83,7 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-gray-900 mb-1">Email Us</h4>
                   <a
                     href="mailto:info@ecoconsult.com"
-                    className="text-green-600 hover:text-green-700"
+                    className="text-green-600 text-sm md:text-base hover:text-green-700"
                   >
                     info@ecoconsult.com
                   </a>
@@ -94,7 +99,7 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-gray-900 mb-1">Call Us</h4>
                   <a
                     href="tel:+919876543210"
-                    className="text-green-600 hover:text-green-700"
+                    className="text-green-600 text-sm md:text-base hover:text-green-700"
                   >
                     +91 98765 43210
                   </a>
@@ -110,11 +115,15 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-gray-900 mb-1">
                     Working Hours
                   </h4>
-                  <p className="text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Monday - Friday: 9:00 AM - 6:00 PM
                   </p>
-                  <p className="text-gray-600">Saturday: 10:00 AM - 2:00 PM</p>
-                  <p className="text-gray-600">Sunday: Closed</p>
+                  <p className="text-sm md:text-base text-gray-600">
+                    Saturday: 10:00 AM - 2:00 PM
+                  </p>
+                  <p className="text-sm md:text-base text-gray-600">
+                    Sunday: Closed
+                  </p>
                 </div>
               </div>
             </div>
@@ -122,10 +131,10 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="md:text-2xl text-xl font-bold text-gray-900 mb-6">
               Send Us a Message
             </h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -142,7 +151,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
-                    placeholder="John Doe"
+                    placeholder="Your Full Name"
                   />
                 </div>
 
@@ -161,7 +170,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
-                    placeholder="john@example.com"
+                    placeholder="Your Email Address"
                   />
                 </div>
               </div>
@@ -191,7 +200,7 @@ export default function ContactSection() {
                     htmlFor="company"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Company Name
+                    Company Name *
                   </label>
                   <input
                     type="text"
@@ -199,6 +208,7 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Company"
                   />
@@ -259,7 +269,6 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                onClick={handleSubmit}
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />

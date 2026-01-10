@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-gray-50/80 backdrop-blur-md shadow-md"
           : "bg-gray-50 shadow-sm"
@@ -142,7 +142,7 @@ export default function Navbar() {
                 Contact
               </button>
               <button
-                onClick={() => scrollToSection("quote")}
+                onClick={() => scrollToSection("contact")}
                 className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors duration-200 text-left"
               >
                 Get Quote

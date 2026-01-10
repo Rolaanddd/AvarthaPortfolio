@@ -17,17 +17,17 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h2 className="text-2xl font-bold mb-4">
-              <span className="text-green-500">ECO</span>
-              <span className="text-white">CONSULT</span>
+              <span className="text-green-500">AVARTHA </span>
+              <span className="text-white">SOLUTIONS</span>
             </h2>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="md:text-base text-sm text-gray-400 mb-6 leading-relaxed">
               Leading environmental, climate, and ESG consulting services for
               industries, corporates, and infrastructure projects.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green-500 mt-1 shrink-0" />
-                <div>
+                <div className="text-sm md:text-base">
                   <p>123 Business Park, Tech District</p>
                   <p>Bangalore, Karnataka 560001</p>
                 </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-green-500 shrink-0" />
                 <a
                   href="mailto:info@ecoconsult.com"
-                  className="hover:text-green-500 transition-colors"
+                  className="hover:text-green-500 text-sm md:text-base transition-colors"
                 >
                   info@ecoconsult.com
                 </a>
@@ -45,7 +45,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-green-500 shrink-0" />
                 <a
                   href="tel:+919876543210"
-                  className="hover:text-green-500 transition-colors"
+                  className="hover:text-green-500 text-sm md:text-base transition-colors"
                 >
                   +91 98765 43210
                 </a>
@@ -54,50 +54,58 @@ export default function Footer() {
           </div>
 
           {/* Services and Quick Links - Side by side on mobile */}
-          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-2">
+          <div className="grid grid-cols-2 md:gap-8 gap-6 lg:col-span-2 lg:grid-cols-2">
             {/* Our Services */}
             <div>
-              <h3 className="text-white text-lg font-semibold mb-4">
+              <h3 className="text-white md:text-lg text-base font-semibold mb-4">
                 OUR SERVICES
               </h3>
               <ul className="space-y-2">
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>Environmental Audit</span>
+                  <span className="text-sm md:text-base">
+                    Environmental Audit
+                  </span>
                 </li>
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>GHG Inventory</span>
+                  <span className="text-sm md:text-base">GHG Inventory</span>
                 </li>
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>Carbon Sequestration</span>
+                  <span className="text-sm md:text-base">
+                    CarbonSequestration
+                  </span>
                 </li>
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>Impact Assessment</span>
+                  <span className="text-sm md:text-base">
+                    Impact Assessment
+                  </span>
                 </li>
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>Biodiversity Studies</span>
+                  <span className="text-sm md:text-base">
+                    Biodiversity Studies
+                  </span>
                 </li>
                 <li>
                   <span className="text-green-500 mr-2">-</span>
-                  <span>ESG Reporting</span>
+                  <span className="text-sm md:text-base">ESG Reporting</span>
                 </li>
               </ul>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-white text-lg font-semibold mb-4">
+              <h3 className="text-white md:text-lg text-base font-semibold mb-4">
                 QUICK LINKS
               </h3>
               <ul className="space-y-2">
                 <li>
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="hover:text-green-500 transition-colors text-left"
+                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                   >
                     Services
                   </button>
@@ -105,7 +113,7 @@ export default function Footer() {
                 <li>
                   <button
                     onClick={() => scrollToSection("team")}
-                    className="hover:text-green-500 transition-colors text-left"
+                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                   >
                     Our Team
                   </button>
@@ -114,7 +122,7 @@ export default function Footer() {
                 <li>
                   <button
                     onClick={() => scrollToSection("contact")}
-                    className="hover:text-green-500 transition-colors text-left"
+                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                   >
                     Contact
                   </button>
@@ -125,21 +133,31 @@ export default function Footer() {
 
           {/* Working Hours */}
           <div className="lg:col-span-1">
-            <h3 className="text-white text-lg font-semibold mb-4">
+            <h3 className="text-white md:text-lg text-base font-semibold mb-4">
               WORKING HOURS
             </h3>
             <div className="space-y-3">
               <div>
-                <p className="text-white font-medium">Monday – Friday:</p>
-                <p className="text-gray-400">9:00 AM – 6:00 PM</p>
+                <p className="md:text-base text-sm text-white font-medium">
+                  Monday – Friday:
+                </p>
+                <p className="md:text-base text-sm text-gray-400">
+                  9:00 AM – 6:00 PM
+                </p>
               </div>
               <div>
-                <p className="text-white font-medium">Saturday:</p>
-                <p className="text-gray-400">10:00 AM – 2:00 PM</p>
+                <p className="md:text-base text-sm text-white font-medium">
+                  Saturday:
+                </p>
+                <p className="md:text-base text-sm text-gray-400">
+                  10:00 AM – 2:00 PM
+                </p>
               </div>
               <div>
-                <p className="text-white font-medium">Sunday:</p>
-                <p className="text-gray-400">Closed</p>
+                <p className="md:text-base text-sm text-white font-medium">
+                  Sunday:
+                </p>
+                <p className="md:text-base text-sm text-gray-400">Closed</p>
               </div>
             </div>
           </div>
