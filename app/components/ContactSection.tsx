@@ -150,7 +150,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -169,7 +169,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Email Address"
                   />
                 </div>
@@ -190,7 +190,7 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function ContactSection() {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 placeholder:text-gray-500 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Company"
                   />
                 </div>
@@ -230,21 +230,42 @@ export default function ContactSection() {
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 >
-                  <option value="">Select a service</option>
-                  <option value="environmental-audit">
+                  <option className="text-gray-800" value="">
+                    Select a service
+                  </option>
+                  <option className="text-gray-800" value="environmental-audit">
                     Environmental Audit
                   </option>
-                  <option value="ghg-inventory">GHG Inventory</option>
-                  <option value="carbon-sequestration">
+                  <option className="text-gray-800" value="ghg-inventory">
+                    GHG Inventory
+                  </option>
+                  <option
+                    className="text-gray-800"
+                    value="carbon-sequestration"
+                  >
                     Carbon Sequestration
                   </option>
-                  <option value="eia">Environmental Impact Assessment</option>
-                  <option value="biodiversity">Biodiversity Assessment</option>
-                  <option value="climate-risk">Climate Risk Assessment</option>
-                  <option value="lca">Life Cycle Assessment</option>
-                  <option value="esg">ESG and BRSR</option>
-                  <option value="due-diligence">Due Diligence</option>
-                  <option value="other">Other</option>
+                  <option className="text-gray-800" value="eia">
+                    Environmental Impact Assessment
+                  </option>
+                  <option className="text-gray-800" value="biodiversity">
+                    Biodiversity Assessment
+                  </option>
+                  <option className="text-gray-800" value="climate-risk">
+                    Climate Risk Assessment
+                  </option>
+                  <option className="text-gray-800" value="lca">
+                    Life Cycle Assessment
+                  </option>
+                  <option className="text-gray-800" value="esg">
+                    ESG and BRSR
+                  </option>
+                  <option className="text-gray-800" value="due-diligence">
+                    Due Diligence
+                  </option>
+                  <option className="text-gray-800" value="other">
+                    Other
+                  </option>
                 </select>
               </div>
 
@@ -262,7 +283,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition resize-none"
+                  className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition resize-none"
                   placeholder="Tell us about your project or requirements..."
                 />
               </div>
