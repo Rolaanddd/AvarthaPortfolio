@@ -36,7 +36,7 @@ export default function Navbar() {
           : "bg-gray-50 shadow-sm"
       }`}
     >
-      <div className=" pr-8 sm:pr-16 md:pr-20">
+      <div className=" pr-8 sm:pr-16 md:pr-20 md:pl-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
