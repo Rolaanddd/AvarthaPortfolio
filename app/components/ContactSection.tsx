@@ -28,7 +28,7 @@ Message: ${formData.message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // WhatsApp API URL with phone number
-    const whatsappURL = `https://wa.me/917204630300?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/918553726968?text=${encodedMessage}`;
 
     // Open WhatsApp in a new tab
     window.open(whatsappURL, "_blank");
@@ -248,43 +248,49 @@ Message: ${formData.message}`;
                   <option className="text-gray-800" value="">
                     Select a service
                   </option>
-                  <option className="text-gray-800" value="environmental-audit">
+                  <option className="text-gray-800" value="Environmental-Audit">
                     Environmental Audit
                   </option>
-                  <option className="text-gray-800" value="ghg-inventory">
+                  <option className="text-gray-800" value="GHG-Inventory">
                     GHG Inventory
                   </option>
                   <option
                     className="text-gray-800"
-                    value="carbon-sequestration"
+                    value="Carbon-Sequestration"
                   >
                     Carbon Sequestration
                   </option>
                   <option
                     className="text-gray-800"
-                    value="environmental-impact-assessment"
+                    value="Environmental-Impact-Assessment"
                   >
                     Environmental Impact Assessment
                   </option>
-                  <option className="text-gray-800" value="biodiversity">
+                  <option
+                    className="text-gray-800"
+                    value="Biodiversity-Assessment"
+                  >
                     Biodiversity Assessment
                   </option>
-                  <option className="text-gray-800" value="climate-risk">
+                  <option
+                    className="text-gray-800"
+                    value="Climate-Risk-Assessment"
+                  >
                     Climate Risk Assessment
                   </option>
                   <option
                     className="text-gray-800"
-                    value="life-cycle-assessment"
+                    value="Life-Cycle-Assessment"
                   >
                     Life Cycle Assessment
                   </option>
-                  <option className="text-gray-800" value="esg and brsr">
+                  <option className="text-gray-800" value="ESG and BRSR">
                     ESG and BRSR
                   </option>
-                  <option className="text-gray-800" value="due-diligence">
+                  <option className="text-gray-800" value="Due-Diligence">
                     Due Diligence
                   </option>
-                  <option className="text-gray-800" value="other">
+                  <option className="text-gray-800" value="Other">
                     Other
                   </option>
                 </select>
