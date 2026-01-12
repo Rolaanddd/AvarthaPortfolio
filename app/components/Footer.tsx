@@ -13,17 +13,19 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900  text-gray-300">
       <div className="container mx-auto px-6 md:px-12 lg:px-16 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="lg:absolute md:w-99">
+          <h2 className="text-2xl font-bold mb-4">
+            <span className="text-green-500">AVARTHA </span>
+            <span className="text-white">SOLUTIONS</span>
+          </h2>
+          <p className="md:text-base text-sm text-gray-400 mb-6 leading-relaxed">
+            Leading environmental, climate, and ESG consulting services for
+            industries, corporates, and infrastructure projects.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 relative md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">
-              <span className="text-green-500">AVARTHA </span>
-              <span className="text-white">SOLUTIONS</span>
-            </h2>
-            <p className="md:text-base text-sm text-gray-400 mb-6 leading-relaxed">
-              Leading environmental, climate, and ESG consulting services for
-              industries, corporates, and infrastructure projects.
-            </p>
+          <div className="lg:col-span-1 lg:mt-38 flex flex-col w-full items-center lg:items-start">
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green-500 mt-1 shrink-0" />
@@ -52,91 +54,79 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          {/* Quick Links */}
+          <div className="flex flex-col w-full items-center">
+            <h3 className="text-white md:text-lg text-base font-semibold md:mb-4 mb-2">
+              QUICK LINKS
+            </h3>
+            <ul className="md:space-y-2 space-y-1">
+              <li>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
+                >
+                  Services
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("team")}
+                  className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
+                >
+                  Our Team
+                </button>
+              </li>
 
-          {/* Services and Quick Links - Side by side on mobile */}
-          <div className="grid grid-cols-2 md:gap-8 gap-6 lg:col-span-2 lg:grid-cols-2">
-            {/* Our Services */}
-            <div>
-              <h3 className="text-white md:text-lg text-base font-semibold mb-4">
-                OUR SERVICES
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">
-                    Environmental Audit
-                  </span>
-                </li>
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">GHG Inventory</span>
-                </li>
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">
-                    CarbonSequestration
-                  </span>
-                </li>
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">
-                    Impact Assessment
-                  </span>
-                </li>
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">
-                    Biodiversity Studies
-                  </span>
-                </li>
-                <li>
-                  <span className="text-green-500 mr-2">-</span>
-                  <span className="text-sm md:text-base">ESG Reporting</span>
-                </li>
-              </ul>
-            </div>
+              <li>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
 
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-white md:text-lg text-base font-semibold mb-4">
-                QUICK LINKS
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <button
-                    onClick={() => scrollToSection("services")}
-                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
-                  >
-                    Services
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("team")}
-                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
-                  >
-                    Our Team
-                  </button>
-                </li>
-
-                <li>
-                  <button
-                    onClick={() => scrollToSection("contact")}
-                    className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
-                  >
-                    Contact
-                  </button>
-                </li>
-              </ul>
-            </div>
+          {/*our services*/}
+          <div className="flex flex-col w-full items-center">
+            <h3 className="text-white md:text-lg text-base font-semibold md:mb-4 mb-2">
+              OUR SERVICES
+            </h3>
+            <ul className="md:space-y-2 space-y-1">
+              <li>
+                <span className="text-sm md:text-base">
+                  Environmental Audit
+                </span>
+              </li>
+              <li>
+                <span className="text-sm md:text-base">GHG Inventory</span>
+              </li>
+              <li>
+                <span className="text-sm md:text-base">
+                  CarbonSequestration
+                </span>
+              </li>
+              <li>
+                <span className="text-sm md:text-base">Impact Assessment</span>
+              </li>
+              <li>
+                <span className="text-sm md:text-base">
+                  Biodiversity Studies
+                </span>
+              </li>
+              <li>
+                <span className="text-sm md:text-base">ESG Reporting</span>
+              </li>
+            </ul>
           </div>
 
           {/* Working Hours */}
-          <div className="lg:col-span-1">
-            <h3 className="text-white md:text-lg text-base font-semibold mb-4">
+          <div className="lg:col-span-1 flex flex-col w-full items-center">
+            <h3 className="text-white md:text-lg text-base font-semibold md:mb-4 mb-2">
               WORKING HOURS
             </h3>
-            <div className="space-y-3">
+            <div className="md:space-y-3 space-y-1">
               <div>
                 <p className="md:text-base text-sm text-white font-medium">
                   Monday – Friday:

@@ -116,7 +116,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col items-center space-y-4">
               <button
                 onClick={() => scrollToSection("home")}
                 className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"

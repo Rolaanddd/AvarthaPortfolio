@@ -43,7 +43,7 @@ export default function EnvironmentalHero() {
             <div className="flex md:flex-wrap gap-4">
               <button
                 onClick={() => scrollToSection("services")}
-                className="md:px-8 md:py-3 px-4 py-2  bg-green-500 hover:bg-green-600 text-white font-semibold rounded transition-colors duration-200"
+                className="md:px-8 md:py-3 px-4 py-2  bg-green-600 hover:bg-green-700 text-white font-semibold rounded transition-colors duration-200"
               >
                 Our Services
               </button>
