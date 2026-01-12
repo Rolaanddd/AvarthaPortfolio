@@ -15,8 +15,23 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    // Format the message for WhatsApp
+    const whatsappMessage = `Name: ${formData.name}
+Email: ${formData.email}
+Phone Number: ${formData.phone}
+Company Name: ${formData.company}
+Service Interested In: ${formData.service}
+Message: ${formData.message}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // WhatsApp API URL with phone number
+    const whatsappURL = `https://wa.me/917204630300?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, "_blank");
   };
 
   const handleChange = (
@@ -98,10 +113,10 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Call Us</h4>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918553726968"
                     className="text-green-600 text-sm md:text-base hover:text-green-700"
                   >
-                    +91 98765 43210
+                    +91 85537 26968
                   </a>
                 </div>
               </div>

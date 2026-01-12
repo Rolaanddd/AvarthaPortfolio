@@ -57,10 +57,14 @@ export default function TeamSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-y-12 gap-y-9 mb-10 md:mb-16"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-y-12 gap-y-9 mb-10 md:mb-16"
         >
           {teamMembers.map((member, index) => (
-            <motion.div key={index} variants={item} className="text-center">
+            <motion.div
+              key={index}
+              variants={item}
+              className="text-center border-gray-50/30 py-3 rounded-sm md:py-5 px-1 flex flex-col justify-center items-center border-[0.5px] "
+            >
               <h3 className="font-medium text-white mb-1">{member.name}</h3>
               <p className="text-sm text-gray-400">{member.role}</p>
             </motion.div>
@@ -95,7 +99,11 @@ export default function TeamSection() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-y-12 gap-y-9"
           >
             {technicalAdvisors.map((advisor, index) => (
-              <motion.div key={index} variants={item} className="text-center">
+              <motion.div
+                key={index}
+                variants={item}
+                className="text-center border-gray-50/30 py-3 rounded-sm md:py-5 px-1 flex flex-col justify-center items-center border-[0.5px]"
+              >
                 <h3 className="font-medium text-white mb-1">{advisor.name}</h3>
                 <p className="text-sm text-gray-400">{advisor.role}</p>
               </motion.div>
