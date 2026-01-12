@@ -243,7 +243,7 @@ Message: ${formData.message}`;
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 >
                   <option className="text-gray-800" value="">
                     Select a service
@@ -260,7 +260,10 @@ Message: ${formData.message}`;
                   >
                     Carbon Sequestration
                   </option>
-                  <option className="text-gray-800" value="eia">
+                  <option
+                    className="text-gray-800"
+                    value="environmental-impact-assessment"
+                  >
                     Environmental Impact Assessment
                   </option>
                   <option className="text-gray-800" value="biodiversity">
@@ -269,10 +272,13 @@ Message: ${formData.message}`;
                   <option className="text-gray-800" value="climate-risk">
                     Climate Risk Assessment
                   </option>
-                  <option className="text-gray-800" value="lca">
+                  <option
+                    className="text-gray-800"
+                    value="life-cycle-assessment"
+                  >
                     Life Cycle Assessment
                   </option>
-                  <option className="text-gray-800" value="esg">
+                  <option className="text-gray-800" value="esg and brsr">
                     ESG and BRSR
                   </option>
                   <option className="text-gray-800" value="due-diligence">
