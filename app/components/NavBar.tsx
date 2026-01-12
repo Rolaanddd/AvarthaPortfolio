@@ -48,8 +48,8 @@ export default function Navbar() {
               <Image
                 src="/assets/logo.png"
                 alt="EcoConsult Logo"
-                width={110}
-                height={110}
+                width={150}
+                height={100}
                 className="object-contain"
               />
             </div>
