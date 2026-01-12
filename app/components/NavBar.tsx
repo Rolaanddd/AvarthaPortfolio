@@ -30,13 +30,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-50/80 backdrop-blur-md shadow-md"
+          ? "bg-gray-50/90 backdrop-blur-lg shadow-md"
           : "bg-gray-50 shadow-sm"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-16">
+      <div className=" pr-8 sm:pr-16 md:pr-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button

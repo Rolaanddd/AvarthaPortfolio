@@ -165,7 +165,7 @@ Message: ${formData.message}`;
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full placeholder:text-gray-500 text-gray-700 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -184,7 +184,7 @@ Message: ${formData.message}`;
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full placeholder:text-gray-500 text-gray-700 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Email Address"
                   />
                 </div>
@@ -205,7 +205,7 @@ Message: ${formData.message}`;
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full text-gray-700 placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -224,7 +224,7 @@ Message: ${formData.message}`;
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 placeholder:text-gray-500 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                    className="w-full text-gray-700 px-4 placeholder:text-gray-500 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                     placeholder="Your Company"
                   />
                 </div>
@@ -243,7 +243,7 @@ Message: ${formData.message}`;
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border text-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 >
                   <option className="text-gray-800" value="">
                     Select a service
@@ -310,7 +310,7 @@ Message: ${formData.message}`;
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition resize-none"
+                  className="w-full text-gray-700 placeholder:text-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition resize-none"
                   placeholder="Tell us about your project or requirements..."
                 />
               </div>
