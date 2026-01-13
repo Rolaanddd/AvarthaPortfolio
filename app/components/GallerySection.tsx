@@ -92,7 +92,7 @@ export default function GallerySection() {
   }, [selectedImage]);
 
   return (
-    <section ref={sectionRef} id="gallery" className="py-9 bg-white">
+    <section ref={sectionRef} id="gallery" className="py-9 pt-4 bg-white">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <div
