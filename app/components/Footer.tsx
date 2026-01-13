@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/gallery">
-                  <button className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+                  <button className="hover:text-green-500 md:text-base text-sm transition-colors text-left">
                     Gallery
                   </button>
                 </Link>
