@@ -2,8 +2,12 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,6 +31,14 @@ export default function Navbar() {
       setIsMenuOpen(false);
     }
   };
+
+  async function handleClick(sectionId: string) {
+    await router.push("/");
+
+    setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 300);
+  }
 
   return (
     <nav
@@ -58,31 +70,37 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={() => handleClick("home")}
               className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium"
             >
               Home
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => handleClick("services")}
               className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium"
             >
               Services
             </button>
             <button
-              onClick={() => scrollToSection("team")}
+              onClick={() => handleClick("team")}
               className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium"
             >
               Team
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleClick("contact")}
               className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium"
             >
               Contact
             </button>
+            <Link href="/gallery">
+              <button className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+                Gallery
+              </button>
+            </Link>
+
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleClick("contact")}
               className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors duration-200"
             >
               Get Quote
@@ -118,31 +136,36 @@ export default function Navbar() {
           <div className="md:hidden py-4 border-t">
             <div className="flex flex-col items-center space-y-4">
               <button
-                onClick={() => scrollToSection("home")}
+                onClick={() => handleClick("home")}
                 className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
               >
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("services")}
+                onClick={() => handleClick("services")}
                 className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
               >
                 Services
               </button>
               <button
-                onClick={() => scrollToSection("team")}
+                onClick={() => handleClick("team")}
                 className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
               >
                 Team
               </button>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleClick("contact")}
                 className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
               >
                 Contact
               </button>
+              <Link href="/gallery">
+                <button className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+                  Gallery
+                </button>
+              </Link>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleClick("contact")}
                 className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors duration-200 text-left"
               >
                 Get Quote

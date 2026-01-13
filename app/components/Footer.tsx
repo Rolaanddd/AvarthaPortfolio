@@ -1,8 +1,10 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { MapPin, Mail, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
+  const router = useRouter();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,9 +12,17 @@ export default function Footer() {
     }
   };
 
+  async function handleClick(sectionId: string) {
+    await router.push("/");
+
+    setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 300);
+  }
+
   return (
     <footer className="bg-gray-900  text-gray-300">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-12">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-8">
         <div className="lg:absolute md:w-99">
           <h2 className="text-2xl font-bold mb-4">
             <span className="text-green-500">AVARTHA </span>
@@ -62,7 +72,15 @@ export default function Footer() {
             <ul className="md:space-y-2 space-y-1">
               <li>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => handleClick("home")}
+                  className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleClick("services")}
                   className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                 >
                   Services
@@ -70,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("team")}
+                  onClick={() => handleClick("team")}
                   className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                 >
                   Our Team
@@ -79,11 +97,18 @@ export default function Footer() {
 
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => handleClick("contact")}
                   className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                 >
                   Contact
                 </button>
+              </li>
+              <li>
+                <Link href="/gallery">
+                  <button className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+                    Gallery
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>
