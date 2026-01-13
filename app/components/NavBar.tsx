@@ -134,33 +134,33 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-end space-y-4">
               <button
                 onClick={() => handleClick("home")}
-                className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
+                className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right"
               >
                 Home
               </button>
               <button
                 onClick={() => handleClick("services")}
-                className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
+                className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right"
               >
                 Services
               </button>
               <button
                 onClick={() => handleClick("team")}
-                className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
+                className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right"
               >
                 Team
               </button>
               <button
                 onClick={() => handleClick("contact")}
-                className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left"
+                className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right"
               >
                 Contact
               </button>
-              <Link href="/gallery">
-                <button className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+              <Link href="/gallery" className="w-full">
+                <button className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right">
                   Gallery
                 </button>
               </Link>
