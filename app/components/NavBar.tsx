@@ -87,18 +87,18 @@ export default function Navbar() {
             >
               Team
             </button>
+
+            <Link href="/gallery">
+              <button className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium text-left">
+                Gallery
+              </button>
+            </Link>
             <button
               onClick={() => handleClick("contact")}
               className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium"
             >
               Contact
             </button>
-            <Link href="/gallery">
-              <button className="text-gray-900 hover:text-green-600 transition-colors duration-200 font-medium text-left">
-                Gallery
-              </button>
-            </Link>
-
             <button
               onClick={() => handleClick("contact")}
               className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors duration-200"
@@ -153,17 +153,17 @@ export default function Navbar() {
               >
                 Team
               </button>
+              <Link href="/gallery" className="w-full">
+                <button className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right">
+                  Gallery
+                </button>
+              </Link>
               <button
                 onClick={() => handleClick("contact")}
                 className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right"
               >
                 Contact
               </button>
-              <Link href="/gallery" className="w-full">
-                <button className="text-gray-700 w-full hover:text-green-600 transition-colors duration-200 font-medium text-right">
-                  Gallery
-                </button>
-              </Link>
               <button
                 onClick={() => handleClick("contact")}
                 className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors duration-200 text-left"

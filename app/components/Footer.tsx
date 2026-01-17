@@ -96,19 +96,19 @@ export default function Footer() {
               </li>
 
               <li>
+                <Link href="/gallery">
+                  <button className="hover:text-green-500 md:text-base text-sm transition-colors text-left">
+                    Gallery
+                  </button>
+                </Link>
+              </li>
+              <li>
                 <button
                   onClick={() => handleClick("contact")}
                   className="hover:text-green-500 md:text-base text-sm transition-colors text-left"
                 >
                   Contact
                 </button>
-              </li>
-              <li>
-                <Link href="/gallery">
-                  <button className="hover:text-green-500 md:text-base text-sm transition-colors text-left">
-                    Gallery
-                  </button>
-                </Link>
               </li>
             </ul>
           </div>
