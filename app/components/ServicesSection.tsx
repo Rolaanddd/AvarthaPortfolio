@@ -166,13 +166,6 @@ export default function ServicesSection() {
               </div>
             ))}
           </div>
-
-          {/* Scroll Indicator */}
-          <div className="flex justify-center gap-2 mt-4">
-            {servicePairs.map((_, index) => (
-              <div key={index} className="w-2 h-2 rounded-full bg-gray-400" />
-            ))}
-          </div>
         </motion.div>
 
         {/* Desktop Grid */}
