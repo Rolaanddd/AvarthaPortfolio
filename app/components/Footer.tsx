@@ -40,8 +40,8 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green-500 mt-1 shrink-0" />
                 <div className="text-sm md:text-base">
-                  <p>123 Business Park, Tech District</p>
-                  <p>Bangalore, Karnataka 560001</p>
+                  <p>No 205, 1st Cross, Shivanna Layout</p>
+                  <p>Halagevaderahalli, Bangalore-560098.</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">

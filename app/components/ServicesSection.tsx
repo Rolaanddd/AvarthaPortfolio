@@ -12,8 +12,11 @@ import {
   Search,
 } from "lucide-react";
 import { motion, easeInOut } from "framer-motion";
+import { useRef } from "react";
 
 export default function ServicesSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   const services = [
     {
       icon: (
@@ -73,6 +76,12 @@ export default function ServicesSection() {
     },
   ];
 
+  // Group services into pairs for mobile carousel
+  const servicePairs = [];
+  for (let i = 0; i < services.length; i += 2) {
+    servicePairs.push(services.slice(i, i + 2));
+  }
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -108,20 +117,71 @@ export default function ServicesSection() {
             OUR SERVICES
           </h2>
           <div className="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className=" md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="md:text-lg text-gray-600 max-w-3xl mx-auto">
             We offer comprehensive environmental, climate, and ESG consulting
             services tailored to meet the unique needs of industries,
             corporates, and infrastructure projects.
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Mobile Carousel - 2 cards vertical per slide */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="md:hidden"
+        >
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {servicePairs.map((pair, pairIndex) => (
+              <div
+                key={pairIndex}
+                className="shrink-0 w-[85%] snap-start flex flex-col gap-4"
+              >
+                {pair.map((service, serviceIndex) => (
+                  <motion.div
+                    key={serviceIndex}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white rounded-lg p-6 shadow-md"
+                  >
+                    <div className="mb-3">{service.icon}</div>
+                    <h3 className="text-base font-bold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="flex justify-center gap-2 mt-4">
+            {servicePairs.map((_, index) => (
+              <div key={index} className="w-2 h-2 rounded-full bg-gray-400" />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Desktop Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
@@ -129,7 +189,7 @@ export default function ServicesSection() {
               variants={card}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="mb-4 ">{service.icon}</div>
+              <div className="mb-4">{service.icon}</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 {service.title}
               </h3>
@@ -140,6 +200,13 @@ export default function ServicesSection() {
           ))}
         </motion.div>
       </div>
+
+      {/* Hide scrollbar globally for this carousel */}
+      <style jsx global>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }
