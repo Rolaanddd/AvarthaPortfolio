@@ -36,7 +36,7 @@ export default function ServicesSection() {
       icon: <TreePine className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
       title: "Carbon Sequestration Assessment",
       description:
-        "Evaluation of industrial green belts for carbon capture potential.",
+        "Evaluation of industrial green belts for carbon capture potential in urban environments.",
     },
     {
       icon: <FileText className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
@@ -56,17 +56,18 @@ export default function ServicesSection() {
       description:
         "TCFD-aligned climate risk evaluation and resilience planning.",
     },
-    {
-      icon: <RefreshCw className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
-      title: "Life Cycle Assessment (LCA)",
-      description:
-        "Comprehensive product and process environmental impact analysis from cradle to grave.",
-    },
+
     {
       icon: <BarChart3 className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
       title: "ESG and BRSR Baseline Assessment",
       description:
         "Strategic ESG framework development and Business Responsibility reporting alignment.",
+    },
+    {
+      icon: <RefreshCw className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
+      title: "Life Cycle Assessment (LCA)",
+      description:
+        "Comprehensive product and process environmental impact analysis from cradle to grave.",
     },
     {
       icon: <Search className="md:w-12 md:h-12 w-8 h-8 text-green-600" />,
