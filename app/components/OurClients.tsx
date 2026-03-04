@@ -22,7 +22,7 @@ export default function OurClients() {
     },
     {
       name: "Bridge Groups",
-      logo: "/assets/bridge.jpg",
+      logo: "/assets/b.png",
     },
   ];
 
